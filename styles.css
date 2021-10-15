@@ -1,0 +1,29 @@
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --color-cyan: hsl(179, 62%, 43%);
+  --color-bright-yellow: hsl(71, 73%, 54%);
+  --color-light-grey: hsl(204, 43%, 93%);
+  --color-grayish-blue: hsl(218, 22%, 67%);
+}
+/* Lists */
+ul {
+  padding: 0;
+}
+/* Grid */
+.grid--1x3 {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(1, 1fr);
+}
