@@ -3,6 +3,11 @@ html {
   font-size: 62.5%;
 }
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e6eff6;
   font-family: "Karla", sans-serif;
   margin: 0;
   padding: 0;
@@ -17,13 +22,124 @@ body {
   --color-bright-yellow: hsl(71, 73%, 54%);
   --color-light-grey: hsl(204, 43%, 93%);
   --color-grayish-blue: hsl(218, 22%, 67%);
+  --color-paragraph: #fff;
+}
+h1,
+h2,
+h3,
+p {
+  color: var(--color-paragraph);
 }
 /* Lists */
 ul {
   padding: 0;
 }
+li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+/* Container */
+.container {
+  border-radius: 5px;
+  width: 80vw;
+  overflow: hidden;
+}
 /* Grid */
 .grid--1x3 {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(1, 1fr);
+}
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+  }
+}
+/* Button */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  border-radius: 5px;
+  padding: 1.5rem 10rem;
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 50px;
+}
+.btn--primary {
+  color: var(--color-paragraph);
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--color-bright-yellow);
+  margin-top: 3.5rem;
+}
+/* Box One */
+.box-one {
+  background-color: var(--color-paragraph);
+  padding: 2rem;
+}
+.box__heading {
+  color: var(--color-cyan);
+  margin-bottom: 3rem;
+}
+.box__heading-two {
+  color: var(--color-bright-yellow);
+  margin-bottom: 2rem;
+}
+.box__text {
+  color: var(--color-grayish-blue);
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 45%;
+  }
+  .box-one {
+    grid-column: 1 / 4;
+  }
+}
+/* Box Two */
+.box-two {
+  background-color: var(--color-cyan);
+  padding: 2rem;
+}
+.box__two-heading {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+.pricing {
+  display: flex;
+}
+.price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-paragraph);
+}
+.annual {
+  color: var(--color-paragraph);
+  font-size: 1.5rem;
+  margin-left: 1.6rem;
+  margin-top: 0.8rem;
+  opacity: 60%;
+}
+.box__two-text {
+  color: var(--color-paragraph);
+  font-size: 1.5rem;
+}
+/* Box Three */
+.box-three {
+  background-color: #4abebd;
+  padding: 2rem;
+}
+.box__three-heading {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+.list {
+  font-size: 1.5rem;
+  color: var(--color-paragraph);
+  opacity: 80%;
 }
